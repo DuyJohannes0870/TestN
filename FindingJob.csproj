@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FindingJobDLL\FindingJobDLL.csproj" />
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
   </ItemGroup>
 
 </Project>

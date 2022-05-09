@@ -34,6 +34,7 @@
       "FindingJob/1.0.0": {
         "dependencies": {
           "FindingJobDLL": "1.0.0",
+          "HelloWorld": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.15",
@@ -1533,6 +1534,14 @@
         },
         "compile": {
           "FindingJobDLL.dll": {}
+        }
+      },
+      "HelloWorld/1.0.0": {
+        "runtime": {
+          "HelloWorld.dll": {}
+        },
+        "compile": {
+          "HelloWorld.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4081,6 +4090,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "FindingJobDLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HelloWorld/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

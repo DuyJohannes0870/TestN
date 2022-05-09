@@ -87,3 +87,5 @@ D:\ProjectA\FindingJob\FindingJob\obj\Debug\net5.0\FindingJob.dll
 D:\ProjectA\FindingJob\FindingJob\obj\Debug\net5.0\ref\FindingJob.dll
 D:\ProjectA\FindingJob\FindingJob\obj\Debug\net5.0\FindingJob.pdb
 D:\ProjectA\FindingJob\FindingJob\obj\Debug\net5.0\FindingJob.genruntimeconfig.cache
+D:\ProjectA\FindingJob\FindingJob\bin\Debug\net5.0\HelloWorld.dll
+D:\ProjectA\FindingJob\FindingJob\bin\Debug\net5.0\HelloWorld.pdb
