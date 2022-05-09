@@ -6,12 +6,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using FindingJobDLL.Repository;
+using FindingJobDLL.Entities;
+using System.Text.Json;
+
 
 namespace FindingJob.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
+        private FindingJobContext _context = new FindingJobContext();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -20,17 +26,32 @@ namespace FindingJob.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            JobRepository jobRepository = new(_context);
+            IEnumerable<Job> jobs = jobRepository.GetAll();
+            //IEnumerable<Job> jobs = jobRepository.FindJobBySkill("PHP");
+            foreach (var job in jobs) {
+            _context.Entry(job).Reference(j => j.City).Load();
+            _context.Entry(job).Reference(j => j.JobTitle).Load();
+            }
+            return View(jobs);
         }
 
         public IActionResult Privacy()
         {
+            IEnumerable<Job> jobs = _context.Jobs.Where(j => j.Skill.SkillId == 1);
             return View();
         }
-
-        public IActionResult Cate()
+        
+        public IActionResult Skill()
         {
-            return View();
+            //JobRepository jobRepository = new(_context);
+            //IEnumerable<Job> jobs = jobRepository.FindJobBySkill("PHP");
+            //foreach (var job in jobs)
+            //{
+            //    _context.Entry(job).Reference(j => j.City).Load();
+            //    _context.Entry(job).Reference(j => j.JobTitle).Load();
+            //}
+            return View(/*jobs*/);
         }
 
         public IActionResult Contact()
@@ -39,6 +60,20 @@ namespace FindingJob.Controllers
         }
 
         public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Detail(int id)
+        {
+            JobRepository jobRepository = new(_context);
+            Job job = jobRepository.GetById(id);
+            _context.Entry(job).Reference(j => j.City).Load();
+            _context.Entry(job).Reference(j => j.JobTitle).Load();
+            return View(job);
+        }
+
+        public IActionResult HRPost()
         {
             return View();
         }

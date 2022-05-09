@@ -1,0 +1,168 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Recruiter's Post";
+}
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="~/web/css/post.css">
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Poster
+                </h1>
+                <p class="text-white link-nav"><a href="@Url.Action("Index","Home")">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="/"> Poster</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+<section class="service-area section-gap">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8 pb-40 header-text">
+                <h1>Post by employer</h1>
+                <p>
+                    The job you want to apply for ?
+                </p>
+            </div>
+        </div>
+        <form action="/">
+
+            <div class="contact-item">
+                <div class="item">
+                    <p>Job Name<span class="required">*</span></p>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="item">
+                    <p>Job Tags<span class="required">*</span></p>
+                    <input type="text" name="name" placeholder="Ex: Unity C# Javascript" required />
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="item">
+                    <p>Start Salary<span class="required">*</span></p>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="item">
+                    <p>End Salary<span class="required">*</span></p>
+                    <input type="text" name="name" required />
+                </div>
+            </div>
+            <div class="position-item">
+                <div class="item">
+                    <p>Start Date<span class="required">*</span></p>
+                    <input type="date" name="bdate" required />
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="item">
+                    <p>End Date<span class="required">*</span></p>
+                    <input type="date" name="bdate" required />
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="item">
+                    <p>Address<span class="required">*</span></p>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="item">
+                    <p>City<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="contact-item">
+
+                <div class="item">
+                    <p>Skill Level<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <p>Job Title<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+            <div class="position-item">
+                <div class="item">
+                    <p>Job Type<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <p>Skills<span class="required">*</span></p>
+                    <select required>
+                        <option value="1">Job 1</option>
+                        <option value="2">Job 2</option>
+                        <option value="3">Job 3</option>
+                        <option value="4">Job 4</option>
+                        <option value="5">Job 5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="question">
+                <p>Job Nature<span class="required">*</span></p>
+                <div class="question-answer">
+                    <div>
+                        <input type="radio" value="none" id="radio_1" name="status" required />
+                        <label for="radio_1" class="radio"><span>Part Time</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_2" name="status" required />
+                        <label for="radio_2" class="radio"><span>Full Time</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_3" name="status" required />
+                        <label for="radio_3" class="radio"><span>Intership</span></label>
+                    </div>
+
+                </div>
+            </div>
+            
+                
+                <div class="item" style="margin-right:50%">
+                    <p>Description<span class="required">*</span></p>
+                    <textarea class="common-textarea mt-10 form-control" name="message" placeholder="Text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Text'" required=""></textarea>
+                </div>
+                <div class="item" style="margin-right:50%">
+                    <p>Photo<span class="required">*</span></p>
+                    <input type="file" name="file" accept="file/*">
+                </div>
+                <div class="btn-block">
+                    <button type="submit">Create New Job</button>
+                </div>
+        </form>
+    </section>

@@ -14,12 +14,10 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Job Listing</title>
+    <title>Finding Job</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-    CSS
-    ============================================= -->
+    <!--CSS============================================= -->
     <link rel="stylesheet" href="~/web/css/linearicons.css">
     <link rel="stylesheet" href="~/web/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/web/css/bootstrap.css">
@@ -28,6 +26,10 @@
     <link rel="stylesheet" href="~/web/css/animate.min.css">
     <link rel="stylesheet" href="~/web/css/owl.carousel.css">
     <link rel="stylesheet" href="~/web/css/main.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    
+
 </head>
 <body>
 
@@ -35,24 +37,27 @@
         <div class="container">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="index.html"><img src="~/web/img/logo.png" alt="" title="" /></a>
+                    <a href="@Url.Action("Index","Home")"><img src="~/web/img/logoo.png" alt="" title="" /></a>
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="@Url.Action("Index","Home")">Home</a></li>
                         <li><a href="@Url.Action("AboutUs","Home")">About Us</a></li>
-                        <li><a href="@Url.Action("Cate","Home")">Category</a></li>
-                        <li><a href="price.html">Price</a></li>
-                        <li><a href="blog-home.html">Blog</a></li>
-                        <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
-                        <li class="menu-has-children">
-                            <a href="">Pages</a>
+                        <li><a href="@Url.Action("HRPost","Home")">Poster</a></li>
+                        @*<li class="menu-has-children">
+                            <a href="">Skill</a>
                             <ul>
-                                <li><a href="elements.html">elements</a></li>
-                                <li><a href="search.html">search</a></li>
-                                <li><a href="single.html">single</a></li>
+                                <li><a href="@Url.Action("DotNet","Skill")">.Net</a></li>
+                                <li><a href="@Url.Action("Java","Skill")">Java</a></li>
+                                <li><a href="@Url.Action("PHP","Skill")">PHP</a></li>
+                                <li><a href="@Url.Action("JavaScript","Skill")">JavaScript</a></li>
+                                <li><a href="@Url.Action("Python","Skill")">Python</a></li>
+                                <li><a href="@Url.Action("Ruby","Skill")">Ruby</a></li>
+                                <li><a href="@Url.Action("ReactJS","Skill")">ReactJS</a></li>
                             </ul>
-                        </li>
+                        </li>*@
+                        <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                        
                         <li><a class="ticker-btn" href="#">Signup</a></li>
                         <li><a class="ticker-btn" href="#">Login</a></li>
                     </ul>
@@ -150,6 +155,17 @@
     <script src="~/web/js/parallax.min.js"></script>
     <script src="~/web/js/mail-script.js"></script>
     <script src="~/web/js/main.js"></script>
+    @*<script>
+        $(document).ready(function () {
+
+            $.get('SkillList', function (data) {
+                console.log(data)
+                $.each(data, function (index, value) {console.log(index + value)
+                    $('<option>').val(value).text(value).appendTo("#countrySelect");
+                })
+            })
+        })
+    </script>*@
 </body>
 </html>
 
