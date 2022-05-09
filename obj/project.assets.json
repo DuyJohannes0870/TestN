@@ -1907,16 +1907,6 @@
         "runtime": {
           "bin/placeholder/FindingJobDLL.dll": {}
         }
-      },
-      "HelloWorld/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/HelloWorld.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HelloWorld.dll": {}
-        }
       }
     }
   },
@@ -6632,17 +6622,11 @@
       "type": "project",
       "path": "../FindingJobDLL/FindingJobDLL.csproj",
       "msbuildProject": "../FindingJobDLL/FindingJobDLL.csproj"
-    },
-    "HelloWorld/1.0.0": {
-      "type": "project",
-      "path": "../HelloWorld/HelloWorld.csproj",
-      "msbuildProject": "../HelloWorld/HelloWorld.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "FindingJobDLL >= 1.0.0",
-      "HelloWorld >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.15"
@@ -6682,9 +6666,6 @@
           "projectReferences": {
             "D:\\ProjectA\\FindingJob\\FindingJobDLL\\FindingJobDLL.csproj": {
               "projectPath": "D:\\ProjectA\\FindingJob\\FindingJobDLL\\FindingJobDLL.csproj"
-            },
-            "D:\\ProjectA\\FindingJob\\HelloWorld\\HelloWorld.csproj": {
-              "projectPath": "D:\\ProjectA\\FindingJob\\HelloWorld\\HelloWorld.csproj"
             }
           }
         }
